@@ -7,23 +7,12 @@ This part is important, because similarity of each pins dependents on their fetu
 Clustering part has responsibility for classification of images by scoring their features. 
 I think you would get expected results. Have a good time!
 
-## In the beginning
-
-Since I prepared the test data, Let's play with it. Run the following command in your new terminal and visit at `http://localhost:8000/`. 
-The images which is displayed on are ones that Mayb could recommend to you. If you click any image, 
-Mayb would shows you similar images which has strong relationship with that you select.
-
-```
-cd /path/to/www;
-python -m CGIHTTPServer
-```
-　
-　
+  
 <img src="https://raw.github.com/after12am/Mayb/master/doc/Mayb.png"/>
 
 ## Usage
 
-As a starting place of recommending images, we have to setup database.
+In the beginning of recommending images, we have to setup database.
 
 ```
 cd /path/to/src
@@ -42,6 +31,15 @@ option to cluster pins we got is:
 ```
 cd /path/to/src
 python mayb.py train
+```
+
+In the end, run the following command in your new terminal and visit at `http://localhost:8000/`. 
+The images which is displayed on are ones that Mayb could recommend to you. If you click any image, 
+Mayb would shows you similar images which has strong relationship with that you select.
+
+```
+cd /path/to/www;
+python -m CGIHTTPServer
 ```
 
 ## Notes
