@@ -51,6 +51,9 @@ def cluster(similarity=pearson):
             break
         offset += 1
 
+# set alias
+train = cluster
+
 # def get_top_matches(data, pin_id, m=5, similarity=pearson):
 #     target = []
 #     for pin in data:
