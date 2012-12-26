@@ -4,16 +4,10 @@ from utils.charset import to_unicode, to_unicode_if_htmlentity
 from datetime import datetime
 from db.mapper import Pins, Words
 
-script_regx = re.compile('<script.*?/script>', re.DOTALL)
-noscript_regx = re.compile('<noscript.*?/noscript>', re.DOTALL)
-style_regx = re.compile('<style.*?/style>', re.DOTALL)
-iframe_regx = re.compile('<iframe.*?/iframe>', re.DOTALL)
-select_regx = re.compile('<select.*?/select>', re.DOTALL)
-comment_regx = re.compile('<!--.*?-->', re.DOTALL)
-
 class _HTML(object):
     
     def __init__(self):
+        self.ignore_tags = ['script', 'noscript', 'style', 'iframe', 'select']
         self.req = None
         self.dom = None
     
@@ -34,12 +28,11 @@ class _HTML(object):
     
     def clean(self, doc):
         doc = to_unicode_if_htmlentity(doc)
-        doc = script_regx.sub('', doc)
-        doc = noscript_regx.sub('', doc)
-        doc = style_regx.sub('', doc)
-        doc = iframe_regx.sub('', doc)
-        doc = select_regx.sub('', doc)
-        doc = comment_regx.sub('', doc)
+        # remove comment
+        doc = re.compile('<!--.*?-->', re.DOTALL).sub('', doc)
+        # remove ignore tags
+        for tag in self.ignore_tags:
+            doc = re.compile('<%s.*?/%s>' % (tag, tag), re.DOTALL).sub('', doc)
         return doc
 
 class _Pin(_HTML):
