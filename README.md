@@ -10,6 +10,18 @@ I think you would get expected results. Have a good time!
   
 <img src="https://raw.github.com/after12am/Mayb/master/doc/Mayb.png"/>
 
+## Requires
+
+Maby is depend on these libraries. You have to install those with easy_install.
+
+* lxml 2.3.5
+* chardet
+
+```
+sudo easy_install "lxml==2.3.5"
+sudo easy_install chardet
+```
+
 ## Usage
 
 In the beginning of recommending images, we have to setup database.
