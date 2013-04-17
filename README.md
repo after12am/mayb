@@ -1,12 +1,11 @@
 Mayb
 ====
 
-Mayb is image recommendation system. This recommendation system consists of two main core of scraping and clustering. 
-Scraping part is to extract appropriate content, such as words and images, as fetures from html. 
-This part is important, because similarity of each pins dependents on their fetures. We have to find what characterize it. 
-Clustering part has responsibility for classification of images by scoring their features. 
-I think you would get expected results. Have a good time!
-
+Mayb is image recommendation system of [pinterest](http://pinterest.com/). This recommendation system consists of two main core of
+scraping and clustering. The first part is to extract feature of words and images from web page. The second part
+has responsibility for classification of images by scoring their features using pearson's correlation. 
+Classification is implemented by calculating the similarity of words related to image, not implemented by analysing 
+image itself. Because of this, this algorism of classification realizes a good performance while being low cost. 
   
 <img src="https://raw.github.com/after12am/Mayb/master/doc/Mayb.png"/>
 
