@@ -5,7 +5,7 @@ Mayb is image recommendation system of [pinterest](http://pinterest.com/). This 
 scraping and clustering. The first part is to extract feature of words and images from web page. The second part
 has responsibility for classification of images by scoring their features using pearson's correlation. 
 Classification is implemented by calculating the similarity of words related to image, not implemented by analysing 
-image itself. Because of this, this algorism of classification realizes a good performance while being low cost. 
+image itself. Therefore, this classification would realize a good performance while being low cost compared to image analysis.
   
 <img src="https://raw.github.com/after12am/Mayb/master/doc/Mayb.png"/>
 
