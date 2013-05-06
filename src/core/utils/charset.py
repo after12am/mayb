@@ -2,12 +2,11 @@ import re, chardet, htmlentitydefs
 import lxml.html
 
 class UnknownEncodingException(Exception):
-    
     def __init__(self):
         Exception.__init__(self, 'Unknown encoding')
 
 def encoding_if_html(text):
-    REGX_CHARSET = r"charset=(?P<charset>[a-zA-Z0-9-]+)"
+    REGX_CHARSET = r"charset=(?P<charset>[a-zA-Z0-9-_]+)"
     root = lxml.html.fromstring(text.lower())
     for meta in root.xpath("//meta[@charset]"):
         encoding = meta.get("charset")
