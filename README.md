@@ -1,15 +1,19 @@
 Mayb
 ====
 
-Mayb is image recommendation system of [pinterest](http://pinterest.com/). This recommendation system consists of two main core of
-scraping and clustering. The first part is to extract feature of words and images from web page. The second part
-has responsibility for classification of images by scoring their features using pearson's correlation. 
-Classification is implemented by calculating the similarity of words related to image, not implemented by analysing 
-image itself. Therefore, this classification would realize a good performance while being low cost compared to image analysis.
-  
+Mayb is context-aware image recommendation system specified on the [pinterest](http://pinterest.com/). This recommendation system proposes related images in addition to similar images on the basis of repins of pinterest users and is implemented by using context of image, not by analysing image itself.
+
+
+**Crawler is not working correctly now, because the specification of pinterest has changed. Fortunately, I seem to be able to support it by improving crawler. Thanks. See you later.**
+
+
+## strategy
+
+There is variation in the way of users's classification of images. It is pinned to the different board even in the same image. This feature can be used to find related images using pearson's correlation. 
+
 <img src="https://raw.github.com/after12am/Mayb/master/doc/Mayb.png"/>
 
-## Requires
+## Require
 
 Maby is depend on these libraries. You have to install those with easy_install.
 
