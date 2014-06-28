@@ -7,11 +7,13 @@ Mayb is context-aware image recommendation system specified on the [pinterest](h
 **Crawler is not working correctly now, because the specification of pinterest has changed. Fortunately, I seem to be able to support it by improving crawler. Thanks. See you later.**
 
 
+<img src="https://raw.github.com/after12am/Mayb/master/doc/Mayb.png"/>
+
+
 ## strategy
 
 There is variation in the way of users's classification of images. It is pinned to the different board even in the same image. This feature can be used to find related images using pearson's correlation. 
 
-<img src="https://raw.github.com/after12am/Mayb/master/doc/Mayb.png"/>
 
 ## Require
 
