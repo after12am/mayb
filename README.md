@@ -23,8 +23,8 @@ Maby is depend on these libraries. You have to install those with easy_install.
 * chardet
 
 ```
-sudo easy_install "lxml==2.3.5"
-sudo easy_install chardet
+$ sudo easy_install "lxml==2.3.5"
+$ sudo easy_install chardet
 ```
 
 ## Usage
@@ -32,22 +32,22 @@ sudo easy_install chardet
 In the beginning of recommending images, we have to setup database.
 
 ```
-cd /path/to/src
-python mayb.py setup
+$ cd /path/to/src
+$ python mayb.py setup
 ```
 
 option to crawle pinterest is:
 
 ```
-cd /path/to/src
-python mayb.py crawle
+$ cd /path/to/src
+$ python mayb.py crawle
 ```
 
 option to cluster pins we got is:
 
 ```
-cd /path/to/src
-python mayb.py train
+$ cd /path/to/src
+$ python mayb.py train
 ```
 
 In the end, run the following command in your new terminal and visit at `http://localhost:8000/`. 
@@ -55,8 +55,8 @@ The images which is displayed on are ones that Mayb could recommend to you. If y
 Mayb would shows you similar images which has strong relationship with that you select.
 
 ```
-cd /path/to/www;
-python -m CGIHTTPServer
+$ cd /path/to/www;
+$ python -m CGIHTTPServer
 ```
 
 ## Notes
