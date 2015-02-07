@@ -1,7 +1,7 @@
 Mayb
 ====
 
-Mayb is context-aware image recommendation system specified on the [pinterest](http://pinterest.com/). This recommendation system proposes related images in addition to similar images on the basis of repins of pinterest users and is implemented by using context of image, not by analysing image itself.
+Mayb is context-aware image recommendation system specified on the [pinterest](http://pinterest.com/). This recommendation system proposes related images in addition to similar images on the basis of repins of pinterest users. The point is to make use of context without analysing image itself.
 
 
 **Crawler is not working correctly now, because the specification of pinterest has changed. Fortunately, I seem to be able to support it by improving crawler. Thanks. See you later.**
